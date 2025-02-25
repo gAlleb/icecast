@@ -1,5 +1,5 @@
 # Icecast
-- Always latest Icecast in Docker with dark theme andd fallback files
+- Always latest Icecast in Docker with dark theme and fallback files
 - Debian Bookworn
 - Enviroment variables ready
 - Builds from source (https://gitlab.xiph.org/xiph/icecast-server.git)
