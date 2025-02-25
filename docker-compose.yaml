@@ -1,0 +1,23 @@
+services:
+  icecast:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - VERSION=
+    container_name: icecast
+    restart: always
+    ports:
+      - 8000:8000
+      - 8443:8443
+    environment:
+      - "TZ=Europe/London"
+      - ICECAST_SOURCE_PASSWORD
+      - ICECAST_ADMIN_PASSWORD
+      - ICECAST_RELAY_PASSWORD
+      - ICECAST_HOSTNAME
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "3"
